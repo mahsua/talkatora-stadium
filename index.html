@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talkatora Stadium, New Delhi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1e3a8a', // blue-900
+                        secondary: '#f59e0b', // amber-500
+                        dark: '#111827', // gray-900
+                        light: '#f3f4f6', // gray-100
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(253, 253, 253, 0.445), rgba(253, 253, 253, 0.384)), url('./main.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-light overflow-x-hidden">
+
+    <nav class="fixed w-full z-50 glass-nav shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <div class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mr-3 shadow-md">
+                        <i class="fa-solid fa-building-columns"></i>
+                    </div>
+                    <span class="font-bold text-2xl text-primary tracking-tight">Talkatora<span class="text-secondary">Stadium</span></span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-primary font-medium transition-colors">About</a>
+                    <a href="#sports" class="text-gray-600 hover:text-primary font-medium transition-colors">Sports</a>
+                    <a href="#entertainment" class="text-gray-600 hover:text-primary font-medium transition-colors">Entertainment</a>
+                    <a href="#conventions" class="text-gray-600 hover:text-primary font-medium transition-colors">Conventions</a>
+                    <a href="#location" class="text-gray-600 hover:text-primary font-medium transition-colors">Location</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-primary focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">About</a>
+                <a href="#sports" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">Sports</a>
+                <a href="#entertainment" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">Entertainment</a>
+                <a href="#conventions" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">Conventions</a>
+                <a href="#location" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">Location</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-bg h-screen flex items-center justify-center pt-20 relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-dark/90"></div>
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <span class="inline-block py-1 px-3 rounded-full bg-secondary/20 text-secondary border border-secondary/50 font-semibold text-sm mb-6 uppercase tracking-wider backdrop-blur-sm">
+                New Delhi's Premier Venue
+            </span>
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+                Talkatora <br/> <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-yellow-300">Indoor Stadium</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                A majestic multi-purpose arena located in the heart of the capital. The ultimate destination for thrilling sports, spectacular live entertainment, and prestigious conventions.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#sports" class="px-8 py-3 bg-primary hover:bg-blue-800 text-white rounded-full font-semibold transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">
+                    Explore Sports
+                </a>
+                <a href="#entertainment" class="px-8 py-3 bg-white/10 hover:bg-white/20 text-white border border-white/30 rounded-full font-semibold transition-all backdrop-blur-sm hover:shadow-xl hover:-translate-y-1">
+                    View Events
+                </a>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-10 hidden md:block">
+            <a href="#about" class="text-white/70 hover:text-white transition-colors">
+                <i class="fa-solid fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-sm font-bold text-primary tracking-widest uppercase mb-2">About The Venue</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold text-dark mb-6">An Architectural Marvel in Central Delhi</h3>
+                    <div class="w-20 h-1 bg-secondary mb-8 rounded"></div>
+                    <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+                        Talkatora Stadium is a prominent multi-purpose indoor stadium located in the serene Talkatora Gardens, near the President's Estate. 
+                    </p>
+                    <p class="text-gray-600 mb-8 text-lg leading-relaxed">
+                        Built with unique architectural elements, the stadium is fully air-conditioned and celebrated for its commitment to sustainability, integrating eco-friendly measures like rainwater harvesting and solar panels. With a seating capacity of around 3,000, it offers an intimate yet grand atmosphere for any event.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                                <i class="fa-solid fa-users text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark">3,000+</h4>
+                                <p class="text-sm text-gray-500">Seating Capacity</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-green-600">
+                                <i class="fa-solid fa-leaf text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark">Eco-Friendly</h4>
+                                <p class="text-sm text-gray-500">Solar & Rainwater</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <!-- Decor element -->
+                    <div class="absolute -inset-4 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-3xl transform rotate-3 z-0"></div>
+                    <img src="./stadium-interior.jpg" alt="Stadium Interior" class="rounded-3xl shadow-2xl relative z-10 w-full h-[400px] object-cover object-center transform transition duration-500 hover:scale-[1.02]">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sports" class="py-24 bg-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-sm font-bold text-primary tracking-widest uppercase mb-2">Athletics & Competition</h2>
+                <h3 class="text-3xl md:text-5xl font-bold text-dark mb-6">A Legacy of Sports</h3>
+                <div class="w-24 h-1 bg-secondary mx-auto rounded"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group flex flex-col">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="./stadium-arena.jpg" alt="Stadium Arena" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    </div>
+                    <div class="p-8 border-t-4 border-primary flex-grow relative bg-white">
+                        <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center text-primary shadow-lg absolute -top-7 left-8 border-2 border-light group-hover:scale-110 transition-transform duration-300">
+                            <i class="fa-solid fa-medal text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-dark mb-4 mt-2">Historic Venue</h4>
+                        <p class="text-gray-600 leading-relaxed text-sm">
+                            Originally constructed for the 1982 Asian Games, the indoor stadium has built a rich and lasting legacy as a premier hub for indoor sports development in India.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group flex flex-col">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="./indoor-competition.jpg" alt="Indoor Competition" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    </div>
+                    <div class="p-8 border-t-4 border-secondary flex-grow relative bg-white">
+                        <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center text-secondary shadow-lg absolute -top-7 left-8 border-2 border-light group-hover:scale-110 transition-transform duration-300">
+                            <i class="fa-solid fa-table-tennis-paddle-ball text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-dark mb-4 mt-2">Indoor Competitions</h4>
+                        <p class="text-gray-600 leading-relaxed text-sm">
+                            Regularly hosts national and international boxing championships, badminton tournaments, wrestling matches, and table tennis. Notable athletes, including Mary Kom, have trained here.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group flex flex-col">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="./outdoor-facilities.jpg" alt="Outdoor Facilities" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    </div>
+                    <div class="p-8 border-t-4 border-green-500 flex-grow relative bg-white">
+                        <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center text-green-500 shadow-lg absolute -top-7 left-8 border-2 border-light group-hover:scale-110 transition-transform duration-300">
+                            <i class="fa-solid fa-baseball-bat-ball text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-dark mb-4 mt-2">Outdoor Facilities</h4>
+                        <p class="text-gray-600 leading-relaxed text-sm">
+                            The adjacent Talkatora Cricket Ground complements the indoor arena, offering practice pitches, nets, and basic gym equipment for cricket matches and robust training programs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="entertainment" class="py-24 bg-dark text-white relative overflow-hidden">
+        <!-- Abstract background shapes -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-secondary/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row items-end justify-between mb-16">
+                <div class="max-w-2xl">
+                    <h2 class="text-sm font-bold text-secondary tracking-widest uppercase mb-2">Culture & Arts</h2>
+                    <h3 class="text-3xl md:text-5xl font-bold mb-6">Live Entertainment & Shows</h3>
+                    <p class="text-gray-400 text-lg">Equipped with state-of-the-art acoustics and dynamic lighting, transforming every performance into an unforgettable experience.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Image Card 1 -->
+                <div class="group relative rounded-2xl overflow-hidden h-[26rem]">
+                    <img src="./concert.jpg" alt="Concert" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/80 to-transparent opacity-95"></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <div class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mb-4 border border-white/10 shadow-lg">
+                            <i class="fa-solid fa-microphone-lines text-white text-lg"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white mb-3">Diverse Shows</h4>
+                        <p class="text-gray-300 text-sm leading-relaxed">A highly popular spot for live music concerts, theater plays, and stand-up comedy shows featuring well-known artists.</p>
+                    </div>
+                </div>
+
+                <!-- Image Card 2 -->
+                <div class="group relative rounded-2xl overflow-hidden h-[26rem]">
+                    <img src="./acoustics.jpg" alt="Acoustics" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/80 to-transparent opacity-95"></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <div class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mb-4 border border-white/10 shadow-lg">
+                            <i class="fa-solid fa-volume-high text-white text-lg"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white mb-3">Performance Ready</h4>
+                        <p class="text-gray-300 text-sm leading-relaxed">World-class acoustic and lighting systems designed to enhance live performances for an audience of 3,000.</p>
+                    </div>
+                </div>
+
+                <!-- Image Card 3 -->
+                <div class="group relative rounded-2xl overflow-hidden h-[26rem] lg:col-span-1 md:col-span-2">
+                    <img src="./cultural-event.jpg" alt="Cultural Event" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/80 to-transparent opacity-95"></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <div class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mb-4 border border-white/10 shadow-lg">
+                            <i class="fa-solid fa-masks-theater text-white text-lg"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white mb-3">Cultural Hub</h4>
+                        <p class="text-gray-300 text-sm leading-relaxed max-w-lg">Frequently hosts vibrant cultural festivals, talent shows, dance events, and grand festive celebrations like Dandiya nights.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="conventions" class="py-24 bg-white relative">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(#1e3a8a 1px, transparent 1px); background-size: 20px 20px;"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5">
+                    <h2 class="text-sm font-bold text-primary tracking-widest uppercase mb-2">Gatherings & Summits</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold text-dark mb-6">Conventions, Politics & Corporate Events</h3>
+                    <div class="w-20 h-1 bg-secondary mb-8 rounded"></div>
+                    <p class="text-gray-600 mb-8 text-lg leading-relaxed">
+                        Due to its strategic central location and robust security infrastructure, Talkatora is the venue of choice for high-profile gatherings in the capital.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
+                        <!-- Gatherings Card -->
+                        <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-100 group flex flex-col">
+                            <div class="h-40 overflow-hidden relative">
+                                <img src="./high-profile-gatherings.jpg" alt="High-Profile Gatherings" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-300"></div>
+                            </div>
+                            <div class="p-6 flex-grow">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+                                        <i class="fa-solid fa-users text-sm"></i>
+                                    </div>
+                                    <h4 class="text-lg font-bold text-dark leading-tight">High-Profile Gatherings</h4>
+                                </div>
+                                <p class="text-gray-500 text-sm leading-relaxed">A favored location for large government assemblies, major political rallies, and significant public addresses.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Corporate Seminars Card -->
+                        <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-100 group flex flex-col">
+                            <div class="h-40 overflow-hidden relative">
+                                <img src="./corporate-seminars.jpg" alt="Corporate Seminars" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-300"></div>
+                            </div>
+                            <div class="p-6 flex-grow">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+                                        <i class="fa-solid fa-chalkboard-user text-sm"></i>
+                                    </div>
+                                    <h4 class="text-lg font-bold text-dark leading-tight">Corporate Seminars</h4>
+                                </div>
+                                <p class="text-gray-500 text-sm leading-relaxed">Frequently utilized by corporate sectors and social organizations for conferences, yoga camps, and educational summits.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:col-span-7">
+                    <div class="bg-light rounded-3xl p-8 md:p-12 border border-gray-100 shadow-xl relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-secondary/10 rounded-bl-full -mr-8 -mt-8"></div>
+                        
+                        <div class="flex items-center gap-4 mb-8">
+                            <div class="w-14 h-14 bg-dark text-white rounded-2xl flex items-center justify-center shadow-lg">
+                                <i class="fa-solid fa-star text-2xl text-secondary"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-dark">VIP Amenities</h3>
+                        </div>
+                        
+                        <p class="text-gray-600 text-lg mb-8 leading-relaxed">
+                            The stadium is impeccably equipped to handle dignitaries and special guests, ensuring comfort, privacy, and safety during major events.
+                        </p>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-white p-4 rounded-xl border border-gray-100 shadow-sm flex items-center gap-3">
+                                <i class="fa-solid fa-couch text-primary"></i>
+                                <span class="font-medium text-gray-700">VIP Lounges</span>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl border border-gray-100 shadow-sm flex items-center gap-3">
+                                <i class="fa-solid fa-shield-halved text-primary"></i>
+                                <span class="font-medium text-gray-700">Robust Security</span>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl border border-gray-100 shadow-sm flex items-center gap-3">
+                                <i class="fa-solid fa-person-booth text-primary"></i>
+                                <span class="font-medium text-gray-700">Modern Changing Rooms</span>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl border border-gray-100 shadow-sm flex items-center gap-3">
+                                <i class="fa-solid fa-briefcase-medical text-red-500"></i>
+                                <span class="font-medium text-gray-700">Medical Rooms</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8 pt-8 border-t border-gray-200">
+                            <button class="w-full bg-dark hover:bg-black text-white font-semibold py-4 rounded-xl transition-colors shadow-md flex justify-center items-center gap-2">
+                                <i class="fa-regular fa-calendar-check"></i> Inquire About Booking
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="location" class="py-24 bg-gray-50 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-sm font-bold text-primary tracking-widest uppercase mb-2">Visit Us</h2>
+                <h3 class="text-3xl md:text-5xl font-bold text-dark mb-6">Location & Contact</h3>
+                <div class="w-24 h-1 bg-secondary mx-auto rounded"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+                <!-- Contact Info Card -->
+                <div class="bg-white p-8 md:p-10 rounded-3xl shadow-lg border border-gray-100 flex flex-col justify-center">
+                    <h4 class="text-2xl font-bold text-dark mb-8">Get in Touch</h4>
+                    <ul class="space-y-8">
+                        <li class="flex items-start">
+                            <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary flex-shrink-0 mr-5 shadow-sm">
+                                <i class="fa-solid fa-location-dot text-2xl"></i>
+                            </div>
+                            <div class="pt-1">
+                                <h5 class="font-bold text-gray-900 text-lg">Address</h5>
+                                <p class="text-gray-600 mt-2 leading-relaxed">Talkatora Garden, President's Estate,<br>New Delhi, Delhi 110004, India</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary flex-shrink-0 mr-5 shadow-sm">
+                                <i class="fa-solid fa-phone text-2xl"></i>
+                            </div>
+                            <div class="pt-1">
+                                <h5 class="font-bold text-gray-900 text-lg">Phone</h5>
+                                <p class="text-gray-600 mt-2 text-lg">011-23094832, 011-23092767</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-14 h-14 rounded-2xl bg-green-100 flex items-center justify-center text-green-600 flex-shrink-0 mr-5 shadow-sm">
+                                <i class="fa-solid fa-envelope text-2xl"></i>
+                            </div>
+                            <div class="pt-1">
+                                <h5 class="font-bold text-gray-900 text-lg">Email</h5>
+                                <a href="mailto:spmspc-sai@gov.in" class="text-primary hover:text-blue-800 transition-colors mt-2 inline-block text-lg">info@talkatorastadium.in</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Map -->
+                <div class="h-[400px] lg:h-auto min-h-[400px] rounded-3xl overflow-hidden shadow-lg border border-gray-100 relative group">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1924.4187951959188!2d77.1938768784447!3d28.62197475013982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d02aac1c988c9%3A0xf08c226605e04fa!2sTalkatora%20Stadium!5e1!3m2!1sen!2sin!4v1787221330489!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="absolute inset-0 w-full h-full grayscale-[0.2] group-hover:grayscale-0 transition-all duration-500"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white border-t border-gray-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">
+                            <i class="fa-solid fa-building-columns"></i>
+                        </div>
+                        <span class="font-bold text-xl text-white tracking-tight">Talkatora<span class="text-secondary">Stadium</span></span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-6 max-w-md">
+                        The ultimate destination for indoor sports, cultural spectacles, and grand conventions in the heart of New Delhi.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-gray-300 hover:bg-primary hover:text-white transition-colors">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-gray-300 hover:bg-primary hover:text-white transition-colors">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-gray-300 hover:bg-primary hover:text-white transition-colors">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="md:justify-self-end">
+                    <h4 class="text-lg font-bold mb-6 border-b border-gray-700 pb-2 inline-block">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#about" class="text-gray-400 hover:text-secondary transition-colors">About the Venue</a></li>
+                        <li><a href="#sports" class="text-gray-400 hover:text-secondary transition-colors">Sports Facilities</a></li>
+                        <li><a href="#entertainment" class="text-gray-400 hover:text-secondary transition-colors">Live Entertainment</a></li>
+                        <li><a href="#conventions" class="text-gray-400 hover:text-secondary transition-colors">Conventions & Events</a></li>
+                        <li><a href="#location" class="text-gray-400 hover:text-secondary transition-colors">Location & Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+                <p>&copy; 2026 Talkatora Stadium. All rights reserved.</p>
+                <div class="mt-4 md:mt-0 space-x-4">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        
+        // Mobile menu toggle
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.remove('shadow-sm');
+            } else {
+                navbar.classList.remove('shadow-md');
+                navbar.classList.add('shadow-sm');
+            }
+        });
+    </script>
+</body>
+</html>
