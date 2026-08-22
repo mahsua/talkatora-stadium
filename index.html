@@ -30,7 +30,7 @@
             backdrop-filter: blur(10px);
         }
         .hero-bg {
-            background-image: linear-gradient(rgba(253, 253, 253, 0.445), rgba(253, 253, 253, 0.384)), url('./main.jpg');
+            background-image: linear-gradient(rgba(253, 253, 253, 0), rgba(253, 253, 253, 0.384)), url('./main.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -359,9 +359,7 @@
                         </div>
                         
                         <div class="mt-8 pt-8 border-t border-gray-200">
-                            <button class="w-full bg-dark hover:bg-black text-white font-semibold py-4 rounded-xl transition-colors shadow-md flex justify-center items-center gap-2">
-                                <i class="fa-regular fa-calendar-check"></i> Inquire About Booking
-                            </button>
+                            <a href="tel:01123092767" class="w-full bg-dark hover:bg-black text-white font-semibold py-4 rounded-xl transition-colors shadow-md flex justify-center items-center gap-2 decoration-none"> <i class="fa-solid fa-phone"></i> Call to Book Now </a>
                         </div>
                     </div>
                 </div>
@@ -421,51 +419,26 @@
         </div>
     </section>
 
-    <footer class="bg-dark text-white border-t border-gray-800 pt-16 pb-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
-                <div>
-                    <div class="flex items-center mb-6">
-                        <div class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">
-                            <i class="fa-solid fa-building-columns"></i>
-                        </div>
-                        <span class="font-bold text-xl text-white tracking-tight">Talkatora<span class="text-secondary">Stadium</span></span>
-                    </div>
-                    <p class="text-gray-400 leading-relaxed mb-6 max-w-md">
-                        The ultimate destination for indoor sports, cultural spectacles, and grand conventions in the heart of New Delhi.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-gray-300 hover:bg-primary hover:text-white transition-colors">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-gray-300 hover:bg-primary hover:text-white transition-colors">
-                            <i class="fa-brands fa-twitter"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-gray-300 hover:bg-primary hover:text-white transition-colors">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="md:justify-self-end">
-                    <h4 class="text-lg font-bold mb-6 border-b border-gray-700 pb-2 inline-block">Quick Links</h4>
-                    <ul class="space-y-3">
-                        <li><a href="#about" class="text-gray-400 hover:text-secondary transition-colors">About the Venue</a></li>
-                        <li><a href="#sports" class="text-gray-400 hover:text-secondary transition-colors">Sports Facilities</a></li>
-                        <li><a href="#entertainment" class="text-gray-400 hover:text-secondary transition-colors">Live Entertainment</a></li>
-                        <li><a href="#conventions" class="text-gray-400 hover:text-secondary transition-colors">Conventions & Events</a></li>
-                        <li><a href="#location" class="text-gray-400 hover:text-secondary transition-colors">Location & Contact</a></li>
-                    </ul>
-                </div>
+    <footer class="bg-[#1a2530] text-[#e2e8f0] py-12 font-sans">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col items-center justify-center gap-6 text-[15px]">
+            
+            <!-- Top Links -->
+            <div class="tracking-wide">
+                <a href="./disclaimer.html" class="hover:text-white transition-colors">Disclaimer</a>
+                <span class="mx-3 text-gray-400">|</span>
+                <a href="https://technology.mahsua.com/pages/donate.html" class="hover:text-white transition-colors">Donate</a>
             </div>
             
-            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
-                <p>&copy; 2026 Talkatora Stadium. All rights reserved.</p>
-                <div class="mt-4 md:mt-0 space-x-4">
-                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
-                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
-                </div>
+            <!-- Copyright -->
+            <div class="tracking-wide">
+                &copy; 2026 Talkatora Stadium, New Delhi. Informal Visitor Guide.
             </div>
+            
+            <!-- Credits -->
+            <div class="text-[#cbd5e1] tracking-wide">
+                Developed by <a href="https://technology.mahsua.com" target="_blank" class="text-[#0084d1] hover:text-[#38bdf8] transition-colors">Mahsua Technology</a> With <span class="text-rose-500">❤️</span> INDIA (Free and Open-Source)
+            </div>
+
         </div>
     </footer>
 
